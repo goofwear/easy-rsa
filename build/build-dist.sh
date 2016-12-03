@@ -67,7 +67,7 @@ stage_unix() {
 	mkdir -p "$DIST_ROOT/unix/$PV"
 	
 	# Copy files into $PV, starting with easyrsa3 as the initial root dir
-	src_files="easyrsa3/ Licensing/ COPYING.md ChangeLog README.quickstart.md"
+	src_files="easyrsa3/* Licensing/* COPYING.md ChangeLog README.quickstart.md"
 	for f in $src_files
 	do
 		cp -a "$SRC_ROOT/$f" "$DIST_ROOT/unix/$PV" || die "failed to copy $f"
